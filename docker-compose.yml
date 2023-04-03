@@ -27,7 +27,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
-      - prometheus_data:/prometheus
+      - "./prometheus_data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
@@ -56,7 +56,7 @@ services:
       - "9093:9093"
     volumes:
       - "./alertmanager:/config"
-      - alertmanager-data:/data
+      - "./alertmanager-data:/data"
     command: --config.file=/config/alertmanager.yml --log.level=debug 
     networks:
       - mynet
@@ -74,10 +74,3 @@ services:
 networks:
   mynet:
     driver: bridge
-
-volumes:
-  prometheus-data:
-
-  grafana-data:
-
-  alertmanager-data:
