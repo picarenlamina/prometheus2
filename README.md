@@ -1,6 +1,8 @@
 # prometheus2
 Monitoring and alert
 
+#main
+https://dev.to/ablx/minimal-prometheus-setup-with-docker-compose-56mp
 # source
 https://grafana.com/docs/grafana-cloud/quickstart/docker-compose-linux/
 
